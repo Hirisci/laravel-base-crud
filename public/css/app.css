@@ -1,0 +1,505 @@
+@import url(https://fonts.googleapis.com/css2?family=Lato:wght@100;
+
+300;400;700;900&display=swap);@charset "UTF-8";
+:root {
+  /*╔════════════════════════════╗
+            COLORS
+    ╚════════════════════════════╝*/
+  --clr-bg-0: rgb(0, 0, 0);
+  --clr-bg-1: rgb(20, 33, 61);
+  --clr-bg-2: rgb(229, 229, 229);
+  /*╔════════════════════════════╗
+        COMPONENT DIMENSION
+  ╚════════════════════════════╝*/
+  /* width */
+  --wdt-container-xl: 80rem;
+  /* height */
+  --hgt-item: 4rem;
+  --hgt-item-lg: 4.5rem;
+  --hgt-item-sm: 2.5rem;
+  /*╔════════════════════════════╗
+              GUTTERS
+  ╚════════════════════════════╝*/
+  --space-unit: 1rem;
+}
+
+/*╔═══════════════╗
+        RESET
+  ╚═══════════════╝*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  box-sizing: border-box;
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+:root {
+  /*╔════════════════════════════╗
+       BASE SPACING
+    ╚════════════════════════════╝*/
+  /*╔════════════════════════════╗
+          MARGIN
+    ╚════════════════════════════╝*/
+  --m-xxs: calc(0.125 * var(--space-unit));
+  --m-xs: calc(0.25 * var(--space-unit));
+  --m-sm: calc(0.5 * var(--space-unit));
+  --m-md: calc(1 * var(--space-unit));
+  --m-lg: calc(1.5 * var(--space-unit));
+  --m-xl: calc(2.25 * var(--space-unit));
+  --m-xxl: calc(3 * var(--space-unit));
+  /*╔════════════════════════════╗
+          PADDING
+    ╚════════════════════════════╝*/
+  --p-xxs: calc(0.125 * var(--space-unit));
+  --p-xs: calc(0.25 * var(--space-unit));
+  --p-sm: calc(0.5 * var(--space-unit));
+  --p-md: calc(1 * var(--space-unit));
+  --p-lg: calc(1.5 * var(--space-unit));
+  --p-xl: calc(2.25 * var(--space-unit));
+  --p-xxl: calc(3 * var(--space-unit));
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+small {
+  font-size: 0.6rem;
+}
+
+.container {
+  max-width: var(--wdt-container-xl);
+  margin: auto;
+}
+
+header {
+  height: var(--hgt-item);
+  background-color: var(--clr-bg-1);
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+main {
+  background-color: var(--clr-bg-0);
+  min-height: calc(100vh - var(--hgt-item));
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  background-color: var(--clr-bg-0);
+  color: white;
+}
+
+.container {
+  padding: var(--p-xxl);
+}
+
+.container a {
+  color: inherit;
+}
+
+.list__header {
+  background-color: var(--clr-bg-1);
+  border-radius: 1rem 1rem 0 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--p-md);
+}
+
+.list__card {
+  background-color: var(--clr-bg-2);
+  padding: var(--p-md);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.list__card .card {
+  background-color: var(--clr-bg-1);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.list__card .card__sx {
+  width: 50%;
+  overflow: hidden;
+  border-radius: 100% 0 0 100%;
+}
+
+.list__card .card__sx img {
+  width: 100%;
+  background-color: var(--clr-bg-2);
+}
+
+.list__card .card__dx {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.list__card .card__title {
+  font-weight: 900;
+}
+
+.list__card .card__link {
+  font-size: 0.75rem;
+  font-weight: 300;
+  opacity: 0.5;
+  letter-spacing: 0.075rem;
+  text-transform: uppercase;
+}
+
+.list__card .card__link:hover {
+  opacity: 1;
+}
+
+.card__display {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.card__display .card {
+  background-color: var(--clr-bg-1);
+  border-radius: 1rem 1rem 0 0;
+  overflow: hidden;
+  width: 70%;
+}
+
+.card__display .card img {
+  background-color: var(--clr-bg-2);
+}
+
+.card__display .card h2 {
+  padding: var(--p-md);
+  padding-bottom: 0;
+  padding-bottom: var(--p-lg);
+  text-align: center;
+  background-color: var(--clr-bg-2);
+  color: var(--clr-bg-1);
+  font-weight: 700;
+}
+
+.card__display .card__info {
+  padding: var(--p-md);
+  padding-bottom: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.card__display .card__info > span {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  padding: 1rem 1.6rem;
+  line-height: 1.6rem;
+}
+
+.card__display .card__sx {
+  width: 50%;
+  overflow: hidden;
+}
+
+.card__display .card__sx img {
+  width: 100%;
+  height: 100%;
+}
+
+.card__display .card__dx {
+  padding: var(--p-lg) 0;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__display .card__link {
+  display: block;
+  padding: var(--p-md);
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 300;
+  opacity: 0.5;
+  letter-spacing: 0.075rem;
+  text-transform: uppercase;
+}
+
+.card__display .card__link:hover {
+  opacity: 1;
+}
+
+.btn {
+  aspect-ratio: 1/1;
+  height: 2rem;
+  font-size: 0.85rem;
+  display: grid;
+  place-items: center;
+  border-radius: 100%;
+  color: white;
+  font-weight: 900;
+}
+
+.btn.add {
+  background-color: rgba(0, 144, 0, 0.503);
+}
+
+.btn.remove {
+  background-color: rgba(201, 0, 0, 0.503);
+}
+
+.btn__list {
+  display: flex;
+  gap: 1rem;
+}
+
+.card__create {
+  text-align: center;
+  width: 70%;
+  background-color: var(--clr-bg-1);
+  border-radius: 1rem 1rem 0 0;
+  overflow: hidden;
+}
+
+.card__create h2 {
+  padding: var(--p-md);
+  padding-bottom: 0;
+  padding-bottom: var(--p-lg);
+  text-align: center;
+  background-color: var(--clr-bg-2);
+  color: var(--clr-bg-1);
+  font-weight: 700;
+}
+
+.card__create input {
+  color: var(--clr-bg-2);
+  text-align: left;
+  margin: var(--m-md);
+  width: 80%;
+  padding: 0.5rem;
+  background-color: transparent;
+  border: transparent;
+  border-bottom: rgba(255, 255, 255, 0.5) 1px solid;
+}
+
+.card__create input::-moz-placeholder {
+  color: var(--clr-bg-2);
+  opacity: 0.5;
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+
+.card__create input::placeholder {
+  color: var(--clr-bg-2);
+  opacity: 0.5;
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+
+.card__create input:focus-visible {
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.card__create input:focus {
+  outline: none;
+  border-bottom: var(--clr-bg-2) 1px solid;
+}
+
+.card__create .btn__list {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

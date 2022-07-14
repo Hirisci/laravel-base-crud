@@ -1,0 +1,55 @@
+.card__create {
+    text-align: center;
+    width: 70%;
+    background-color: var(--clr-bg-1);
+    border-radius: 1rem 1rem 0 0;
+    overflow: hidden;
+    h2 {
+        padding: var(--p-md);
+        padding-bottom: 0;
+        padding-bottom: var(--p-lg);
+        text-align: center;
+        background-color: var(--clr-bg-2);
+        color: var(--clr-bg-1);
+        font-weight: 700;
+    }
+
+    input {
+        color: var(--clr-bg-2);
+        text-align: left;
+        margin: var(--m-md);
+        width: 80%;
+        padding: 0.5rem;
+        background-color: transparent;
+        border: transparent;
+        border-bottom: rgba(255, 255, 255, 0.5) 1px solid;
+
+        &::placeholder {
+            color: var(--clr-bg-2);
+            opacity: 0.5;
+            text-transform: capitalize;
+            font-size: 1rem;
+        }
+    }
+
+    input:focus-visible {
+        border: none;
+        background-image: none;
+        background-color: transparent;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+    input:focus {
+        outline: none;
+        border-bottom: var(--clr-bg-2) 1px solid;
+    }
+
+    .btn__list {
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
