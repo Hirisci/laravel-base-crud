@@ -1,0 +1,44 @@
+.show {
+    .container {
+        display: grid;
+        place-items: center;
+        min-height: calc(100vh - var(--hgt-item));
+    }
+
+    .card {
+        padding: var(--p-md);
+        background-color: var(--clr-bg-1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        &__img {
+            height: 60vh;
+            aspect-ratio: 3/4;
+        }
+        &__title {
+            text-align: center;
+            &-primary {
+                font-size: 2rem;
+            }
+            &-secondary {
+                font-size: 0.75rem;
+                line-height: 2rem;
+                text-transform: uppercase;
+                letter-spacing: 0.02rem;
+            }
+        }
+        &__info {
+            width: 70%;
+            & div:first-child {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+        &__nationality {
+            text-align: center;
+        }
+    }
+}
