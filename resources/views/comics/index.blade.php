@@ -9,8 +9,8 @@
         <div class="list__header">
             <h1>Lista Fumetti preferiti</h1>
             <div class="btn__list">
-                <a class="btn add" href="{{route('comics.create')}}"><i class="fa-solid fa-plus"></i></a> 
                 <a class="btn remove" href=""><i class="fa-regular fa-trash-can"></i></a> 
+                <a class="btn add" href="{{route('comics.create')}}"><i class="fa-solid fa-plus"></i></a> 
             </div>
         </div>
         <ul class="list__card">
