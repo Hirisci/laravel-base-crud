@@ -355,10 +355,12 @@ body {
   background-color: var(--clr-bg-2);
 }
 
-.card__display .card h2 {
-  padding: var(--p-md);
+.card__display .card__header {
+  padding: 0 var(--p-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding-bottom: 0;
-  padding-bottom: var(--p-lg);
   text-align: center;
   background-color: var(--clr-bg-2);
   color: var(--clr-bg-1);
@@ -424,16 +426,23 @@ body {
   display: grid;
   place-items: center;
   border-radius: 100%;
-  color: white;
   font-weight: 900;
+  cursor: pointer;
 }
 
 .btn.add {
   background-color: rgba(0, 144, 0, 0.503);
+  color: white;
 }
 
 .btn.remove {
   background-color: rgba(201, 0, 0, 0.503);
+  color: white;
+}
+
+.btn.edit {
+  background-color: rgba(201, 107, 0, 0.503);
+  color: white;
 }
 
 .btn__list {
@@ -459,7 +468,7 @@ body {
   font-weight: 700;
 }
 
-.card__create input {
+input {
   color: var(--clr-bg-2);
   text-align: left;
   margin: var(--m-md);
@@ -470,36 +479,46 @@ body {
   border-bottom: rgba(255, 255, 255, 0.5) 1px solid;
 }
 
-.card__create input::-moz-placeholder {
+input::-moz-placeholder {
   color: var(--clr-bg-2);
   opacity: 0.5;
   text-transform: capitalize;
   font-size: 1rem;
 }
 
-.card__create input::placeholder {
+input::placeholder {
   color: var(--clr-bg-2);
   opacity: 0.5;
   text-transform: capitalize;
   font-size: 1rem;
 }
 
-.card__create input:focus-visible {
+input:focus-visible {
   border: none;
   background-image: none;
   background-color: transparent;
   box-shadow: none;
 }
 
-.card__create input:focus {
+input:focus {
   outline: none;
   border-bottom: var(--clr-bg-2) 1px solid;
 }
 
-.card__create .btn__list {
+.btn__list {
   padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.card__header-edit {
+  padding: var(--p-md);
+  padding-bottom: 0;
+  padding-bottom: var(--p-lg);
+  text-align: center;
+  background-color: var(--clr-bg-2);
+  color: var(--clr-bg-1);
+  font-weight: 700;
 }
 

@@ -9,10 +9,12 @@
         background-color: var(--clr-bg-1);
         border-radius: 1rem 1rem 0 0;
         overflow: hidden;
-        h2 {
-            padding: var(--p-md);
+        &__header {
+            padding: 0 var(--p-md);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             padding-bottom: 0;
-            padding-bottom: var(--p-lg);
             text-align: center;
             background-color: var(--clr-bg-2);
             color: var(--clr-bg-1);
@@ -76,13 +78,20 @@
     display: grid;
     place-items: center;
     border-radius: 100%;
-    color: white;
     font-weight: 900;
+    cursor: pointer;
+
     &.add {
         background-color: rgba(0, 144, 0, 0.503);
+        color: white;
     }
     &.remove {
         background-color: rgba(201, 0, 0, 0.503);
+        color: white;
+    }
+    &.edit {
+        background-color: rgba(201, 107, 0, 0.503);
+        color: white;
     }
     &__list {
         display: flex;

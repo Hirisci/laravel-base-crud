@@ -17,7 +17,7 @@ class CreateTableComics extends Migration
             $table->id();
             $table->string('title',75);
             $table->text('description');
-            $table->text('thumb')->nullable();
+            $table->text('thumb')->nullable( );
             $table->float('price', 4,2);
             $table->string('serie',50);
             $table->dateTime('sale_date')->nullable();
