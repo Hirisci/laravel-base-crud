@@ -22,12 +22,12 @@
                             <form action="{{route('comics.update', $comic->id)}}" method="POST">
                                 @csrf
                                 @method('PUT')
-                                <input type="text" class="form-control" name="title" placeholder="Titolo" value="{{$comic->title}}">
-                                <input type="text" class="form-control" name="description" placeholder="Descrizione" value="{{$comic->description}}">
-                                <input type="text" class="form-control" name="thumb" placeholder="url copertina" value="{{$comic->thumb}}">
-                                <input type="number" class="form-control" required name="price" min="0" value="0" step="any" value="{{$comic->price}}">
-                                <input type="text" class="form-control" name="serie" placeholder="serie" value="{{$comic->serie}}"> 
-                                <input type="text" class="form-control" name="type" placeholder="tipo" value="{{$comic->type}}"> 
+                                <input type="text" name="title" placeholder="Titolo" value="{{$comic->title}}">
+                                <input type="text" name="description" placeholder="Descrizione" value="{{$comic->description}}">
+                                <input type="text" name="thumb" placeholder="url copertina" value="{{$comic->thumb}}">
+                                <input type="number" name="price" min="0" value="0" step="any" value="{{$comic->price}}">
+                                <input type="text" name="serie" placeholder="serie" value="{{$comic->serie}}"> 
+                                <input type="text" name="type" placeholder="tipo" value="{{$comic->type}}"> 
                                 <div class="btn__list">
                                     <a class="btn remove" href="{{route('comics.index')}}"><i class="fa-solid fa-xmark"></i></a>
                                     <button type="submit" class="btn add"><i class="fa-solid fa-plus"></i></button>

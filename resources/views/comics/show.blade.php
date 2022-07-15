@@ -14,7 +14,11 @@
 
                         <h2>{{$comic->title}}</h2>
                         <div class="btn__list">
-                            <a class="btn remove" href="{{route('comics.destroy', $comic->id)}}"><i class="fa-regular fa-trash-can"></i></a>
+                            <form action="{{route('comics.destroy', $comic->id)}}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn remove"><i class="fa-regular fa-trash-can"></i></button>
+                            </form>
                             <a class="btn edit" href="{{route('comics.edit', $comic->id)}}"><i class="fa-solid fa-pen-to-square"></i></a>
                         </div>
                     </div>
@@ -45,8 +49,6 @@
                             </div>
                         </div>
                     </div>
-                  
-
                     <a class="card__link" href="{{route('comics.index')}}">Torna alla lista</a>
                 </div>
             
